@@ -30,6 +30,8 @@ TODO 메인 이미지
 
 ## 사용 기술
 
+HTML, CSS, Javascript, React, React-Router-Dom
+
 # 프로젝트 소개
 
 ## 주제
