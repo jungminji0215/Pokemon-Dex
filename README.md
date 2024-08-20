@@ -1,8 +1,47 @@
-# React + Vite
+# 목차
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+- [프로젝트 정보](#프로젝트-정보)
+  - [프로젝트명](#프로젝트명)
+  - [개발 기간](#개발-기간)
+  - [개발자](#개발자)
+  - [사용 기술](#사용-기술)
+- [프로젝트 소개](#프로젝트-소개)
+  - [주제](#주제)
+  - [기능](#기능)
+  - [시연 영상](#시연-영상)
+- [아키텍처](#아키텍처)
+  - [디렉토리 구조](#디렉토리-구조)
+  - [컴포넌트 구조](#컴포넌트-구조)
+- [기록](#기록)
 
-Currently, two official plugins are available:
+# 포켓몬 도감
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+TODO 메인 이미지
+
+- 배포 URL :
+
+# 프로젝트 정보
+
+## 프로젝트명
+
+## 개발 기간
+
+## 개발자
+
+## 사용 기술
+
+# 프로젝트 소개
+
+## 주제
+
+## 기능
+
+## 시연 영상
+
+# 아키텍처
+
+## 디렉토리 구조
+
+## 컴포넌트 구조
+
+# 기록
