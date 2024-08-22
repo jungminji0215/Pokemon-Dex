@@ -4,7 +4,7 @@ import { DEX_URL } from "../utils/path.js";
 import pokemon from "../assets/pokemon.svg";
 import styled from "styled-components";
 
-const StyledSection = styled.section`
+const StyledDiv = styled.div`
   height: 100vh;
   display: flex;
   justify-content: center;
@@ -31,7 +31,7 @@ const Home = () => {
   const navigate = useNavigate();
 
   return (
-    <StyledSection>
+    <StyledDiv>
       <StyledImg src={pokemon} alt="포켓몬 도감" />
 
       <StyledButton
@@ -41,7 +41,7 @@ const Home = () => {
       >
         포켓몬 도감 시작하기
       </StyledButton>
-    </StyledSection>
+    </StyledDiv>
   );
 };
 
