@@ -1,17 +1,25 @@
 import React from "react";
 import styled from "styled-components";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { DEX_URL } from "../utils/path.js";
+import MOCK_DATA from "../mock.js";
 
 const PokemonDetail = () => {
+  console.log(MOCK_DATA);
   const navigate = useNavigate();
+  const pokemonId = useParams().id;
+  console.log(pokemonId);
+  const pokemon = MOCK_DATA.find((p) => {
+    return p.id === Number(pokemonId);
+  });
+  console.log(pokemon);
 
   return (
     <StyledSection>
-      <img />
-      <span>식스테일</span>
-      <span>타입 : 불꽃</span>
-      <p>불꽃 타입의....</p>
+      <img src={pokemon.img_url} />
+      <span>{pokemon.korean_name}</span>
+      <span>{pokemon.types.join(", ")}</span>
+      <p>{pokemon.description}</p>
       <button
         onClick={() => {
           navigate(DEX_URL);
