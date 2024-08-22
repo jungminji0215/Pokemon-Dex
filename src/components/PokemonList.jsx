@@ -2,16 +2,6 @@ import React from "react";
 import styled from "styled-components";
 import PokemonCard from "./PokemonCard";
 
-const StyledSection = styled.section`
-  background-color: blue;
-  width: 80%;
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  grid-auto-rows: minmax(300px, auto);
-  grid-gap: 30px;
-  padding: 30px;
-`;
-
 const PokemonList = ({ pokemonList, addPokemon }) => {
   return (
     <StyledSection>
@@ -34,5 +24,15 @@ const PokemonList = ({ pokemonList, addPokemon }) => {
     </StyledSection>
   );
 };
+
+const StyledSection = styled.section`
+  background-color: blue;
+  width: 80%;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-auto-rows: minmax(300px, auto);
+  grid-gap: 30px;
+  padding: 30px;
+`;
 
 export default PokemonList;

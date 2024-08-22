@@ -4,6 +4,24 @@ import { DEX_URL } from "../utils/path.js";
 import pokemon from "../assets/pokemon.svg";
 import styled from "styled-components";
 
+const Home = () => {
+  const navigate = useNavigate();
+
+  return (
+    <StyledDiv>
+      <StyledImg src={pokemon} alt="포켓몬 도감" />
+
+      <StyledButton
+        onClick={() => {
+          navigate(DEX_URL);
+        }}
+      >
+        포켓몬 도감 시작하기
+      </StyledButton>
+    </StyledDiv>
+  );
+};
+
 const StyledDiv = styled.div`
   height: 100vh;
   display: flex;
@@ -26,23 +44,5 @@ const StyledButton = styled.button`
   color: white;
   border: none;
 `;
-
-const Home = () => {
-  const navigate = useNavigate();
-
-  return (
-    <StyledDiv>
-      <StyledImg src={pokemon} alt="포켓몬 도감" />
-
-      <StyledButton
-        onClick={() => {
-          navigate(DEX_URL);
-        }}
-      >
-        포켓몬 도감 시작하기
-      </StyledButton>
-    </StyledDiv>
-  );
-};
 
 export default Home;

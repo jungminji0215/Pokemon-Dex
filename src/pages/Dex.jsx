@@ -11,8 +11,20 @@ const Dex = () => {
 
   const addPokemon = (newPokemon) => {
     setSelectedPokemon((prev) => {
-      // TODO 여기서 오류메세지 떨굴 수 있는 방법 생각하기 (use... )
-      if (prev.length === MY_POKEMON_COUNT) return prev;
+      if (prev.length === MY_POKEMON_COUNT) {
+        alert("6 개 넘음. 그만 추가하세요.");
+        return prev;
+      }
+
+      if (
+        prev.find((p) => {
+          return p.id === newPokemon.id;
+        })
+      ) {
+        alert("똑같은 포켓몬 추가 불가");
+        return prev;
+      }
+
       return [...prev, newPokemon];
     });
   };

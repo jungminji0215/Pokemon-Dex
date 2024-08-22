@@ -1,16 +1,25 @@
 import React from "react";
 import styled from "styled-components";
+import { useNavigate } from "react-router-dom";
+import { DETAIL_URL } from "../utils/path.js";
 
 const PokemonCard = ({ pokemon, addPokemon, removePokemon, isSelected }) => {
+  const navigate = useNavigate();
+
   return pokemon ? (
-    <StyledDiv>
+    <StyledDiv
+      onClick={() => {
+        navigate(DETAIL_URL + "/" + pokemon.id);
+      }}
+    >
       <img src={pokemon.img_url} />
       <span>{pokemon.korean_name}</span>
       <span>No.{pokemon.id}</span>
 
       {isSelected ? (
         <button
-          onClick={() => {
+          onClick={(e) => {
+            e.stopPropagation();
             removePokemon(pokemon);
           }}
         >
@@ -18,7 +27,8 @@ const PokemonCard = ({ pokemon, addPokemon, removePokemon, isSelected }) => {
         </button>
       ) : (
         <button
-          onClick={() => {
+          onClick={(e) => {
+            e.stopPropagation();
             addPokemon(pokemon);
           }}
         >
