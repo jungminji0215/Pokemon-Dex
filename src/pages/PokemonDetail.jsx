@@ -5,14 +5,11 @@ import { DEX_URL } from "../utils/path.js";
 import MOCK_DATA from "../mock.js";
 
 const PokemonDetail = () => {
-  console.log(MOCK_DATA);
   const navigate = useNavigate();
   const pokemonId = useParams().id;
-  console.log(pokemonId);
   const pokemon = MOCK_DATA.find((p) => {
     return p.id === Number(pokemonId);
   });
-  console.log(pokemon);
 
   return (
     <StyledSection>

@@ -1,9 +1,14 @@
-import React from "react";
+import React, { useContext } from "react";
 import styled from "styled-components";
 import { useNavigate } from "react-router-dom";
 import { DETAIL_URL } from "../utils/path.js";
+import { usePokemonContext } from "../context/PokemonContext.jsx";
 
-const PokemonCard = ({ pokemon, addPokemon, removePokemon, isSelected }) => {
+const PokemonCard = ({ pokemon, isSelected }) => {
+  console.log("PokemonCard 랜더링");
+
+  const { addPokemon, removePokemon } = usePokemonContext();
+
   const navigate = useNavigate();
 
   return pokemon ? (
