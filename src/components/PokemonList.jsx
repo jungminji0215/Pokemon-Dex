@@ -4,7 +4,7 @@ import PokemonCard from "./PokemonCard";
 import MOCK_DATA from "../mock.js";
 
 const PokemonList = ({ pokemonList }) => {
-  console.log("PokemonList 랜더링");
+  // console.log("PokemonList 랜더링");
 
   return (
     <StyledSection>

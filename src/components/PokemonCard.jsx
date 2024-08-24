@@ -5,7 +5,7 @@ import { DETAIL_URL } from "../utils/path.js";
 import { usePokemonContext } from "../context/PokemonContext.jsx";
 
 const PokemonCard = ({ pokemon, isSelected }) => {
-  console.log("PokemonCard 랜더링");
+  // console.log("PokemonCard 랜더링");
 
   const { addPokemon, removePokemon } = usePokemonContext();
 

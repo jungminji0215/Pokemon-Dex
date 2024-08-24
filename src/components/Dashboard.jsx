@@ -7,7 +7,7 @@ import {
 } from "../context/PokemonContext.jsx";
 
 const Dashboard = () => {
-  console.log("Dashboard 랜더링");
+  // console.log("Dashboard 랜더링");
 
   const { selectedPokemon } = usePokemonContext();
 
