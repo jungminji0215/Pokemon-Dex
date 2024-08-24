@@ -1,8 +1,11 @@
 import React from "react";
 import styled from "styled-components";
 import PokemonCard from "./PokemonCard";
+import MOCK_DATA from "../mock.js";
 
-const PokemonList = ({ pokemonList, addPokemon }) => {
+const PokemonList = ({ pokemonList }) => {
+  console.log("PokemonList 랜더링");
+
   return (
     <StyledSection>
       {/* React는 JSX 코드를 JavaScript로 변환할 때, 
@@ -11,14 +14,8 @@ const PokemonList = ({ pokemonList, addPokemon }) => {
       React는 이 배열의 각 컴포넌트를 순차적으로 렌더링하고,
        그것들을 DOM에 추가하기때문에 map 을 사용해보자. */}
       {pokemonList.map((pokemon) => {
-        // TODO 리팩토링 : 상태 전역 관리
         return (
-          <PokemonCard
-            key={pokemon.id}
-            pokemon={pokemon}
-            addPokemon={addPokemon}
-            isSelected={false}
-          />
+          <PokemonCard key={pokemon.id} pokemon={pokemon} isSelected={false} />
         );
       })}
     </StyledSection>

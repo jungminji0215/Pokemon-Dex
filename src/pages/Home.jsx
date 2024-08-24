@@ -4,6 +4,8 @@ import { DEX_URL } from "../utils/path.js";
 import pokemon from "../assets/pokemon.svg";
 import styled from "styled-components";
 
+// clg
+// clo
 const Home = () => {
   const navigate = useNavigate();
 

@@ -44,6 +44,11 @@ HTML, CSS, Javascript, React, React-Router-Dom
 
 ## 디렉토리 구조
 
+- react context API 를 통해 전역 데이터를 관리
+
 ## 컴포넌트 구조
 
 # 기록
+
+- 대시보드 랜더링 관련
+- react context API 사용하여 리팩토링 관련
