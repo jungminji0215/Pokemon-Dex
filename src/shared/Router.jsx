@@ -8,15 +8,15 @@ import { PokemonProvider } from "../context/PokemonContext";
 
 const Router = () => {
   return (
-    <PokemonProvider>
-      <BrowserRouter>
-        <Routes>
-          <Route path={HOME_URL} element={<Home />} />
-          <Route path={DEX_URL} element={<Dex />} />
-          <Route path={DETAIL_URL + "/:id"} element={<PokemonDetail />} />
-        </Routes>
-      </BrowserRouter>
-    </PokemonProvider>
+    // <PokemonProvider>
+    <BrowserRouter>
+      <Routes>
+        <Route path={HOME_URL} element={<Home />} />
+        <Route path={DEX_URL} element={<Dex />} />
+        <Route path={DETAIL_URL + "/:id"} element={<PokemonDetail />} />
+      </Routes>
+    </BrowserRouter>
+    // </PokemonProvider>
   );
 };
 
