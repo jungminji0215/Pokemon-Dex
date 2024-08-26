@@ -23,13 +23,14 @@ const PokemonList = ({ pokemonList }) => {
 };
 
 const StyledSection = styled.section`
-  background-color: blue;
+  background-color: wheat;
   width: 80%;
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   grid-auto-rows: minmax(300px, auto);
   grid-gap: 30px;
   padding: 30px;
+  border-radius: 10px;
 `;
 
 export default PokemonList;

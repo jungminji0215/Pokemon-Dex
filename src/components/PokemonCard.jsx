@@ -1,8 +1,9 @@
-import React, { useContext } from "react";
+import React from "react";
 import styled from "styled-components";
 import { useNavigate } from "react-router-dom";
 import { DETAIL_URL } from "../utils/path.js";
 import { usePokemonContext } from "../context/PokemonContext.jsx";
+import monsterball from "../assets/monsterball.png";
 
 const PokemonCard = ({ pokemon, isSelected }) => {
   // console.log("PokemonCard 랜더링");
@@ -22,36 +23,56 @@ const PokemonCard = ({ pokemon, isSelected }) => {
       <span>No.{pokemon.id}</span>
 
       {isSelected ? (
-        <button
+        <StyledButton
           onClick={(e) => {
             e.stopPropagation();
             removePokemon(pokemon);
           }}
         >
           {"삭제"}
-        </button>
+        </StyledButton>
       ) : (
-        <button
+        <StyledButton
           onClick={(e) => {
             e.stopPropagation();
             addPokemon(pokemon);
           }}
         >
           {"추가"}
-        </button>
+        </StyledButton>
       )}
     </StyledDiv>
   ) : (
-    "없음"
+    <StyledDiv>
+      <img src={monsterball} style={{ width: "50px", height: "50px" }} />
+    </StyledDiv>
   );
 };
 
 const StyledDiv = styled.div`
-  background-color: red;
+  background-color: #dfd3c3;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  border-radius: 10px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+
+  transition: transform 0.3s ease, background-color 0.3s ease;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+`;
+
+const StyledButton = styled.button`
+  background-color: red;
+  border: none;
+  color: white;
+  padding: 5px 20px;
+  border-radius: 10px;
+  font-weight: 500;
+  margin-top: 20px;
 `;
 
 export default PokemonCard;

@@ -25,25 +25,28 @@ const PokemonDetail = () => {
   return (
     <PokemonProvider>
       <StyledSection>
-        <img src={pokemon.img_url} />
-        <span>{pokemon.korean_name}</span>
-        <span>{pokemon.types.join(", ")}</span>
-        <p>{pokemon.description}</p>
-        <button
+        <img
+          src={pokemon.img_url}
+          style={{ width: "200px", height: "200px" }}
+        />
+        <StyledH2>{pokemon.korean_name}</StyledH2>
+        <StyledSpan>{pokemon.types.join(", ")}</StyledSpan>
+        <StyledSpan>{pokemon.description}</StyledSpan>
+        <StyledButton
           onClick={() => {
             console.log("상세페이지에서 포켓몬 추가");
             addPokemon(pokemon);
           }}
         >
           추가하기
-        </button>
-        <button
+        </StyledButton>
+        <StyledButton
           onClick={() => {
             navigate(DEX_URL);
           }}
         >
           뒤로가기
-        </button>
+        </StyledButton>
       </StyledSection>
     </PokemonProvider>
   );
@@ -51,11 +54,32 @@ const PokemonDetail = () => {
 
 const StyledSection = styled.section`
   height: 100vh;
-  background-color: red;
+  background-color: wheat;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+`;
+
+const StyledButton = styled.button`
+  background-color: black;
+  border: none;
+  color: white;
+  padding: 5px 20px;
+  border-radius: 10px;
+  font-weight: 500;
+  margin-top: 20px;
+`;
+
+const StyledH2 = styled.h2`
+  font-size: 30px;
+  color: red;
+  margin-bottom: 20px;
+`;
+
+const StyledSpan = styled.span`
+  font-size: 20px;
+  margin-bottom: 20px;
 `;
 
 export default PokemonDetail;
