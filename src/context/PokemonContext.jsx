@@ -1,4 +1,5 @@
 import { createContext, useContext, useState } from "react";
+import Swal from "sweetalert2";
 
 export const PokemonContext = createContext(null);
 
@@ -14,7 +15,9 @@ export const PokemonProvider = ({ children }) => {
   const addPokemon = (newPokemon) => {
     setSelectedPokemon((prev) => {
       if (prev.length === MY_POKEMON_COUNT) {
-        alert("6 개 넘음. 그만 추가하세요.");
+        Swal.fire(`포켓몬은 ${MY_POKEMON_COUNT}개 까지 추가 가능합니다.
+        포켓몬 한 개를 삭제 후 추가하세요.`);
+
         return prev;
       }
 
@@ -23,7 +26,7 @@ export const PokemonProvider = ({ children }) => {
           return p.id === newPokemon.id;
         })
       ) {
-        alert("똑같은 포켓몬 추가 불가");
+        Swal.fire("똑같은 포켓몬 추가 불가");
         return prev;
       }
 
@@ -38,7 +41,6 @@ export const PokemonProvider = ({ children }) => {
     setSelectedPokemon(updatePokemon);
   };
 
-  // TODO setSelectedPokemon 에 바로 필터해서 넣는 방법임 나중에 수정하기
   //   const removePokemon = (pokemon) => {
   //     setSelectedPokemon((prev) => prev.filter((p) => p.id !== pokemon.id));
   //   };
