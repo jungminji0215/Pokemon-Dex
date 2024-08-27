@@ -1,6 +1,6 @@
 import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Home from "../pages/home.jsx";
+import Home from "../pages/Home.jsx";
 import Dex from "../pages/Dex.jsx";
 import PokemonDetail from "../pages/PokemonDetail.jsx";
 import { HOME_URL, DETAIL_URL, DEX_URL } from "../utils/path.js";
