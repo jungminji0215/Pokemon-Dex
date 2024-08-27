@@ -17,7 +17,7 @@ const PokemonList = ({ pokemonList }) => {
 };
 
 const StyledSection = styled.section`
-  background-color: wheat;
+  background-color: #f7e6c7;
   width: 80%;
   display: grid;
   grid-template-columns: repeat(6, 1fr);

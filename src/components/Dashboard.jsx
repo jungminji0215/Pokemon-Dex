@@ -1,15 +1,13 @@
 import React from "react";
+import { useSelector } from "react-redux";
 import styled from "styled-components";
 import PokemonCard from "./PokemonCard";
-import {
-  MY_POKEMON_COUNT,
-  usePokemonContext,
-} from "../context/PokemonContext.jsx";
 
+const MY_POKEMON_COUNT = 6;
 const Dashboard = () => {
   // console.log("Dashboard 랜더링");
 
-  const { selectedPokemon } = usePokemonContext();
+  const selectedPokemon = useSelector((state) => state.pokemon);
 
   return (
     <StyledSection>
@@ -39,7 +37,7 @@ const StyledH1 = styled.h1`
 `;
 
 const StyledSection = styled.section`
-  background-color: wheat;
+  background-color: #f7e6c7;
   width: 80%;
   padding: 30px;
   margin: 30px 0;

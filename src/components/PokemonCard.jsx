@@ -2,15 +2,15 @@ import React from "react";
 import styled from "styled-components";
 import { useNavigate } from "react-router-dom";
 import { DETAIL_URL } from "../utils/path.js";
-import { usePokemonContext } from "../context/PokemonContext.jsx";
 import monsterball from "../assets/monsterball.png";
+import { addPokemon, removePokemon } from "../features/pokemonSlice.js";
+import { useDispatch } from "react-redux";
 
 const PokemonCard = ({ pokemon, isSelected }) => {
   // console.log("PokemonCard 랜더링");
 
-  const { addPokemon, removePokemon } = usePokemonContext();
-
   const navigate = useNavigate();
+  const dispatch = useDispatch();
 
   return pokemon ? (
     <StyledDiv
@@ -26,7 +26,7 @@ const PokemonCard = ({ pokemon, isSelected }) => {
         <StyledButton
           onClick={(e) => {
             e.stopPropagation();
-            removePokemon(pokemon);
+            dispatch(removePokemon(pokemon));
           }}
         >
           {"삭제"}
@@ -35,7 +35,7 @@ const PokemonCard = ({ pokemon, isSelected }) => {
         <StyledButton
           onClick={(e) => {
             e.stopPropagation();
-            addPokemon(pokemon);
+            dispatch(addPokemon(pokemon));
           }}
         >
           {"추가"}
@@ -50,7 +50,7 @@ const PokemonCard = ({ pokemon, isSelected }) => {
 };
 
 const StyledDiv = styled.div`
-  background-color: #dfd3c3;
+  background-color: #f0eae3;
   display: flex;
   justify-content: center;
   align-items: center;
