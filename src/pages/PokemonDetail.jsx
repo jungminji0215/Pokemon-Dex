@@ -3,8 +3,8 @@ import styled from "styled-components";
 import { useNavigate, useParams } from "react-router-dom";
 import { DEX_URL } from "../utils/path.js";
 import MOCK_DATA from "../mock.js";
-import { usePokemonContext } from "../context/PokemonContext.jsx";
-import { PokemonProvider } from "../context/PokemonContext.jsx";
+import { addPokemon } from "../features/pokemonSlice.js";
+import { useDispatch } from "react-redux";
 
 /**
  * TODO 궁금증 및 고민
@@ -16,7 +16,7 @@ const PokemonDetail = () => {
   const navigate = useNavigate();
   const pokemonId = useParams().id;
 
-  const { addPokemon } = usePokemonContext();
+  const dispatch = useDispatch();
 
   const pokemon = MOCK_DATA.find((p) => {
     return p.id === Number(pokemonId);
@@ -30,8 +30,7 @@ const PokemonDetail = () => {
       <StyledSpan>{pokemon.description}</StyledSpan>
       <StyledButton
         onClick={() => {
-          console.log("상세페이지에서 포켓몬 추가");
-          addPokemon(pokemon);
+          dispatch(addPokemon(pokemon));
         }}
       >
         추가하기
@@ -49,7 +48,7 @@ const PokemonDetail = () => {
 
 const StyledSection = styled.section`
   height: 100vh;
-  background-color: wheat;
+  background-color: #f7e6c7;
   display: flex;
   justify-content: center;
   align-items: center;

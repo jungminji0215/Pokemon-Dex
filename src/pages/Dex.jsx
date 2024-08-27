@@ -18,7 +18,7 @@ const StyledDiv = styled.div`
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background-color: orange;
+  background-color: pink;
 `;
 
 export default Dex;
