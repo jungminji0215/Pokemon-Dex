@@ -113,10 +113,15 @@ https://github.com/user-attachments/assets/397ad38d-0aa1-4be4-9067-8f96fd83abbc
 
 - [포켓몬 도감 블로그 기록](https://jungminji0215.tistory.com/category/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8/%5B%EA%B0%9C%EC%9D%B8%5D%20%ED%8F%AC%EC%BC%93%EB%AA%AC%20%EB%8F%84%EA%B0%90%20%EB%A7%8C%EB%93%A4%EA%B8%B0)
 
+<br>
+
 ## 🔥 개선할 부분
 
-- [] RTK 사용해서 리팩토링
-- [] 포켓몬 id : 1 → 001 형식으로 변경
-- [] 반응형으로 바꾸기
-- [] UX 개선
+- [ ] RTK 사용해서 리팩토링
+- [ ] 포켓몬 id : 1 → 001 형식으로 변경
+- [ ] 반응형으로 바꾸기
+- [ ] CSS 좀더 이쁘게 해보기
+- [ ] 전역 스타일링으로 리팩토링해보기
+- [ ] 뒤로가기 개선
+- [ ] UX 개선
   - 추가 누르면 추가 되었습니다 알림뜨고 대시보드 쪽으로 이동하기 등..
