@@ -21,6 +21,7 @@ export const PokemonProvider = ({ children }) => {
         return prev;
       }
 
+      // TODO selectedPokemon.includes 로 해도 될듯
       if (
         prev.find((p) => {
           return p.id === newPokemon.id;

@@ -25,11 +25,12 @@ const Home = () => {
 };
 
 const StyledDiv = styled.div`
-  height: 100vh;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
+  width: 100%;
+  height: 100vh;
   background-color: orange;
 `;
 
